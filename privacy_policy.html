@@ -64,14 +64,14 @@
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="effective">Effective date: April 7, 2026</p>
+<p class="effective">Effective date: April 29, 2026</p>
 
 <p>Bloop ("the Game") is a single-player mobile game developed by Andrew Masters ("we", "us"). Your privacy matters to us, and this policy explains what information the Game collects, how it is used, and your choices.</p>
 
 <h2>Information We Collect</h2>
 
 <div class="highlight">
-  <strong>Short version:</strong> We collect anonymous gameplay analytics to improve the Game. If you choose to enable Cloud Save, we also store your Google email and game progress in the cloud. We do not sell any data.
+  <strong>Short version:</strong> We collect anonymous gameplay analytics to improve the Game. If you choose to enable Cloud Save, we also store your Google email and game progress in the cloud. We do not sell any data, and we do not collect advertising identifiers.
 </div>
 
 <h3 style="color:#e6edf3; font-size:15px; margin:16px 0 6px;">Gameplay Analytics</h3>
@@ -83,7 +83,7 @@
   <li>In-app purchase events (pack purchased, not payment details)</li>
   <li>Session information (app launches)</li>
 </ul>
-<p>This data is anonymous and cannot be used to identify you personally. It helps us understand how players interact with the Game so we can make it better.</p>
+<p>Firebase generates a randomly assigned app-instance identifier so analytics events from the same install can be grouped together. This identifier is not linked to your name, email, or any personally identifiable information, and it is reset if you reinstall the Game. The Game does <strong>not</strong> collect the Android Advertising ID (AAID) or any other advertising identifier.</p>
 
 <h3 style="color:#e6edf3; font-size:15px; margin:16px 0 6px;">Crash Reporting</h3>
 <p>We use Google Firebase Crashlytics to automatically collect crash reports when errors occur. These reports include technical device information (device model, operating system version) and error details. They do not include personal information.</p>
@@ -92,9 +92,10 @@
 <p>If you choose to enable Cloud Save by signing in with your Google account, we collect and store:</p>
 <ul>
   <li>Your Google account email address (used solely to identify your save data)</li>
+  <li>A Firebase Authentication user ID (a randomly generated identifier linked to your Google account for this app only)</li>
   <li>Game progress data (level completion, stars, wallet balance, equipped cosmetics, unlocked packs, and companion progress)</li>
 </ul>
-<p>This data is stored in Google Firebase Firestore and is associated with your Google account. Cloud Save is entirely optional -- the Game functions fully without it. Cloud Save data is synced automatically while you are signed in.</p>
+<p>This data is stored in Google Firebase Firestore and is associated with your Google account. Cloud Save is entirely optional -- the Game functions fully without it. Cloud Save data is synced automatically while you are signed in. You can sign out, delete your cloud save data, or disconnect your account at any time from the Settings menu (see "Your Choices" below).</p>
 
 <h3 style="color:#e6edf3; font-size:15px; margin:16px 0 6px;">Local Storage</h3>
 <p>Your game progress, settings, and purchases are also saved locally on your device. This local data is not transmitted to us or any third party unless you enable Cloud Save.</p>
@@ -105,7 +106,7 @@
   <li>Location data</li>
   <li>Photos, files, or device contacts</li>
   <li>Payment or credit card details (purchases are handled entirely by Google Play)</li>
-  <li>Advertising identifiers</li>
+  <li>Advertising identifiers (the Android Advertising ID is explicitly excluded from this app)</li>
 </ul>
 
 <h2>In-App Purchases</h2>
@@ -115,6 +116,8 @@
 <p>The Game uses the following third-party services, each with their own privacy policies:</p>
 <ul>
   <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Firebase</a> (analytics, crash reporting, authentication, and cloud storage)</li>
+  <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Sign-In</a> (used only when you enable Cloud Save)</li>
+  <li><a href="https://developer.android.com/guide/playcore/in-app-review" target="_blank" rel="noopener">Google Play In-App Review API</a> (used to show an optional rating prompt; the Game does not collect any personal data through this feature)</li>
   <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services</a> (app distribution and in-app purchases)</li>
 </ul>
 
@@ -122,15 +125,15 @@
 <p>The Game is suitable for all ages. We do not knowingly collect personal information from children. The anonymous analytics data collected by default contains no personal identifiers. Cloud Save, which collects a Google email address, requires the user to actively opt in by signing into their Google account.</p>
 
 <h2>Data Retention</h2>
-<p>Anonymous analytics data is retained in Firebase according to Google's standard retention policies (typically 14 months for event data). Crash reports are retained for 90 days. You can reset your anonymous analytics identifier by reinstalling the Game.</p>
-<p>Cloud Save data is retained in Firebase Firestore until you request its deletion. Signing out of Cloud Save in the app stops syncing but does not automatically delete previously stored data. To request deletion of your cloud save data, contact us at the email below.</p>
+<p>Anonymous analytics data is retained in Firebase according to Google's standard retention policies (typically 14 months for event data). Crash reports are retained for 90 days. You can reset your anonymous app-instance identifier by reinstalling the Game.</p>
+<p>Cloud Save data is retained in Firebase Firestore until you delete it. Signing out of Cloud Save in the app stops syncing but does not automatically delete previously stored data. You can delete your cloud save data at any time using the "Delete Cloud Save" option in Settings, or by contacting us at the email below.</p>
 
 <h2>Your Choices</h2>
 <ul>
   <li><strong>Cloud Save:</strong> You can sign in or out of Cloud Save at any time in Settings. Signing out stops cloud syncing. Cloud Save is entirely optional.</li>
-  <li><strong>Data deletion:</strong> To request deletion of your cloud save data, contact us at the email below.</li>
+  <li><strong>Delete cloud save data:</strong> Use the "Delete Cloud Save" option in Settings to permanently remove your cloud save data and disconnect your account. You can also email us at the address below to request deletion.</li>
   <li><strong>Uninstall:</strong> Removing the Game deletes all locally stored data from your device.</li>
-  <li><strong>Opt out of analytics:</strong> You can limit ad tracking and analytics collection through your device's privacy settings.</li>
+  <li><strong>Disable analytics:</strong> The Game does not collect advertising identifiers, and there is no advertising tracking to opt out of. To stop all analytics collection, uninstall the Game or contact us to request deletion of any data associated with your install.</li>
 </ul>
 
 <h2>Changes to This Policy</h2>
